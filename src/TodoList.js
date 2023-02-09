@@ -3,15 +3,15 @@ import React from "react";
 const todoList = [
     {
     title: 'To finish assignment',
-    objectID: 0,
+    id: 0,
     },
     {
     title: 'Read the book Road to React',
-    objectID: 1,
+    id: 1,
     },
     {
     title: 'Watch Youtube videos',
-    objectID: 2,
+    id: 2,
     }
     ];
 
@@ -21,7 +21,7 @@ function TodoList(){
         {todoList.map(
         (item)=>{
             return( 
-            <li key={item.objectID}>
+            <li key={item.id}>
                 {item.title}
             </li>
             )
