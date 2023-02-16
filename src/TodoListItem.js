@@ -1,9 +1,9 @@
 import React from "react";
 
-function TodoListItem(props){
+function TodoListItem({key, todo}){
    return(
-    <li key={props.key}>
-        {props.todo.title} 
+    <li key={key}>
+        {todo} 
     </li>
    ) 
 }
