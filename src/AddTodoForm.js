@@ -5,12 +5,13 @@ function AddTodoForm ({onAddTodo}){
         setTodoTitle(event.target.value) 
     }
     const handleAddTodo = (event) => {
-
         event.preventDefault();
-        const todoTitle = event.target.title.value; 
-        console.log(todoTitle);
-        event.target.title.value = "";
-        onAddTodo(todoTitle);
+        const newTodo = {
+            title: todoTitle,
+            id: Date.now()
+        };
+        onAddTodo(newTodo);
+        setTodoTitle("");
     }
     return (
         <div>
