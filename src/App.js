@@ -19,6 +19,7 @@ function App() {
     setTodoList((todoList) => [...todoList, newTodo])
   }
 
+  
   function removeTodo(id) {
     console.log('index', id);
     const index = todoList.findIndex(todo => todo === id);
