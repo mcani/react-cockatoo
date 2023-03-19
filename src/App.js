@@ -3,7 +3,6 @@ import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
 
 
-
 const useSemiPersistentState = (state) =>{
   const [todoList, setTodoList] = useState(JSON.parse(localStorage.getItem(state))||[]);
   useEffect(()=>{
@@ -24,7 +23,6 @@ function App() {
       <h1>ToDoList</h1>
       <AddTodoForm onAddTodo={addTodo}/>
       <TodoList todoList={todoList}/>
-      
     </div>
   );
 }
