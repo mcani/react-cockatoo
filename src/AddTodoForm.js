@@ -3,7 +3,6 @@ import InputWithLabel from "./InputWithLabel"
 
 function AddTodoForm (props){
     const [todoTitle , setTodoTitle]= useState("") 
-    // const [todos, setTodos] = useState([])
     
     const handleTitleChange = (event) => {
         console.log("Target value: ", event.target.value);
@@ -12,8 +11,11 @@ function AddTodoForm (props){
     
     const handleAddTodo = (event) => {
         event.preventDefault();
-        props.onAddTodo(todoTitle);
-        // setTodos([...todos, todoTitle]);
+        const newTodo = {
+            title: todoTitle,
+            id: Date.now()
+        }
+        props.onAddTodo(newTodo);
         setTodoTitle("");
 }
     

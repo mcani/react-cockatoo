@@ -5,7 +5,7 @@ function TodoList({todoList, onRemoveTodo}){
     console.log("I GOT: ", todoList);
     return(
         <ul>
-        {todoList.map(todoItem => <TodoListItem key={todoItem} todo={todoItem} onRemoveTodo={onRemoveTodo}/>)}
+        {todoList.map(todoItem => <><TodoListItem todo={todoItem} onRemoveTodo={onRemoveTodo}/></>)}
         </ul>   
     )
 };

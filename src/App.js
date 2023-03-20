@@ -22,7 +22,7 @@ function App() {
   
   function removeTodo(id) {
     console.log('index', id);
-    const index = todoList.findIndex(todo => todo === id);
+    const index = todoList.findIndex(todo => todo.id === id);
     if (index !== -1) {
       const newTodoList = [...todoList];
       newTodoList.splice(index, 1);
